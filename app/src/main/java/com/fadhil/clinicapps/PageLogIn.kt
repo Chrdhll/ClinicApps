@@ -29,7 +29,7 @@ class PageLogIn : AppCompatActivity() {
         }
 
         btnSignIn.setOnClickListener(){
-            val intent = Intent(this,DoctorsPageActivity::class.java)
+            val intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
         }
 

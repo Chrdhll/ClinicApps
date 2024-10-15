@@ -5,6 +5,7 @@ import android.graphics.ColorSpace.Model
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,6 +18,7 @@ import com.fadhil.clinicapps.model.ModelIcon
 import com.fadhil.clinicapps.model.ModelListDoctors
 
 class DoctorsPageActivity : AppCompatActivity() {
+    private lateinit var txtBack : TextView
 
     private lateinit var RecyclerViewMenu : RecyclerView
     private lateinit var AdapterMenu : AdapterMenuIcon
@@ -59,6 +61,12 @@ class DoctorsPageActivity : AppCompatActivity() {
         AdapterDoctor= AdapterDoctors(menudokter)
         RecyclerViewDoctor.adapter = AdapterDoctor
 
+
+        txtBack = findViewById(R.id.txtBack)
+        
+        txtBack.setOnClickListener(){
+            finish()
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
