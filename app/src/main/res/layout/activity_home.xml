@@ -24,7 +24,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:text="Welcome back, Mark!"
+                android:text="Welcome back, Dhill!"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
